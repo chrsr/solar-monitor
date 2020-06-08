@@ -6,7 +6,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
-        "FunctionName": "1_LAMBDA_URN"
+        "FunctionName": "1_LAMBDA_ARN"
       },
       "Next": "SolarEdgeDetails",
       "TimeoutSeconds": 30
@@ -15,7 +15,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
-        "FunctionName": "2_LAMBDA_URN",
+        "FunctionName": "2_LAMBDA_ARN",
         "Payload": {
           "Input.$": "$"
         }
@@ -27,7 +27,7 @@
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
-        "FunctionName": "3_LAMBDA_URN",
+        "FunctionName": "3_LAMBDA_ARN",
         "Payload": {
           "Input.$": "$"
         }
