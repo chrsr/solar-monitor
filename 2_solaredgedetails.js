@@ -3,7 +3,7 @@ const https = require('https')
 exports.handler = async (event) => {
 
   const API_KEY = "[PASTEYOURSOLAREDGEAPIKEYHERE]"
-  const SITE_ID = "[YOURSITEID]
+  const SITE_ID = "[YOURSITEID]"
   const dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
 
   let options = {
