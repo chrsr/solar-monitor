@@ -3,11 +3,12 @@ const https = require('https')
 exports.handler = async (event) => {
 
   const API_KEY = "[PASTEYOURSOLAREDGEAPIKEYHERE]"
+  const SITE_ID = "[YOURSITEID]"
 
   let options = {
     host: 'monitoringapi.solaredge.com',
     port: 443,
-    path: `/site/1489566/overview.json?api_key=${API_KEY}`,
+    path: `/site/${SITE_ID}/overview.json?api_key=${API_KEY}`,
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
