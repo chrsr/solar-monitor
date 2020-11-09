@@ -2,7 +2,7 @@
   "Comment": "SolarEdgeMonitor",
   "StartAt": "SolarEdgeOverview",
   "States": {
-    "1_solaredgetime": {
+    "SolarEdgeOverview": {
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
@@ -11,7 +11,7 @@
       "Next": "SolarEdgeDetails",
       "TimeoutSeconds": 30
     },
-    "2_solaredgedetails": {
+    "SolarEdgeDetails": {
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
@@ -23,7 +23,7 @@
       "Next": "solarEdgeSendStatusToIFTTT",
       "TimeoutSeconds": 30
     },
-    "3_iftttwebhook": {
+    "solarEdgeSendStatusToIFTTT": {
       "Type": "Task",
       "Resource": "arn:aws:states:::lambda:invoke",
       "Parameters": {
