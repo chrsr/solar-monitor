@@ -7,9 +7,10 @@
       on: "turnon_light",
       off: "turnoff_light"
     }
+    const meters = null
 
     try {
-      const meters = event.Input.Payload.powerDetails.meters
+      meters = event.Input.Payload.powerDetails.meters
     } catch (exception) {
       console.log("Could not read power meter data", exception)
       return

@@ -4,9 +4,10 @@ exports.handler = async (event) => {
 
   const API_KEY = process.env.SOLAREDGE_APIKEY
   const SITE_ID = process.env.SOLAREDGE_SITEID
+  const dateTime = null
 
   try {
-    const dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
+    dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
   } catch (exception) {
     console.log("Could not read last update time", exception)
     return
