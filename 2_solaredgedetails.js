@@ -2,9 +2,15 @@ const https = require('https')
 
 exports.handler = async (event) => {
 
-  const API_KEY = "[PASTEYOURSOLAREDGEAPIKEYHERE]"
-  const SITE_ID = "[YOURSITEID]"
-  const dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
+  const API_KEY = process.env.SOLAREDGE_APIKEY
+  const SITE_ID = process.env.SOLAREDGE_SITEID
+
+  try {
+    const dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
+  } catch (exception) {
+    console.log("Could not read last update time", exception)
+    return
+  }
 
   let options = {
     host: 'monitoringapi.solaredge.com',

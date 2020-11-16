@@ -2,8 +2,8 @@ const https = require('https')
 
 exports.handler = async (event) => {
 
-  const API_KEY = "[PASTEYOURSOLAREDGEAPIKEYHERE]"
-  const SITE_ID = "[YOURSITEID]"
+  const API_KEY = process.env.SOLAREDGE_APIKEY
+  const SITE_ID = process.env.SOLAREDGE_SITEID
 
   let options = {
     host: 'monitoringapi.solaredge.com',
