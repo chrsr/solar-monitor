@@ -6,6 +6,14 @@ Full story can be found here: https://medium.com/p/97b2735e48aa
 
 # Quick setup
 
+### Prerequisites
+
+- AWS account
+- Solar Edge monitoring account
+- IFTTT account (for smart bulb)
+
+### Basic setup
+
 - Create three new AWS lambda functions using each `.js` file
 - Configure Lambda environment variables for each corresponding `process.env.*` values listed in each function
 - Create a new AWS Step Function state machine using `statemachine.json`
