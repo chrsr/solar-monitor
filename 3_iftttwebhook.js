@@ -7,7 +7,7 @@
       on: "turnon_light",
       off: "turnoff_light"
     }
-    const meters = null
+    let meters = null
 
     try {
       meters = event.Input.Payload.powerDetails.meters

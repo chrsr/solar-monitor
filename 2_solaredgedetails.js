@@ -4,7 +4,7 @@ exports.handler = async (event) => {
 
   const API_KEY = process.env.SOLAREDGE_APIKEY
   const SITE_ID = process.env.SOLAREDGE_SITEID
-  const dateTime = null
+  let dateTime = null
 
   try {
     dateTime = encodeURI(event.Input.Payload.overview.lastUpdateTime)
